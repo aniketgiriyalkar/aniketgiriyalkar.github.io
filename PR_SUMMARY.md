@@ -9,6 +9,8 @@
 - Add curated project, about, personal, and contact pages.
 - Add Emberbound, an original responsive Canvas remake of the historical Maryo
   Python game.
+- Refresh the portfolio README so it documents the linked repositories, the
+  resume, and likely modernization paths.
 
 ## Emberbound
 
@@ -33,6 +35,16 @@
   contact page, and footer.
 - Explicit placeholders for current career dates, personal interests, and
   PlayStation details that still need refreshed content.
+
+## Repository Docs Sweep
+
+- Updated the README in the original Maryo/Pygame repo so it clearly explains
+  the historical role of that project and its browser-first successor.
+- Reworked the README files in the linked analytics, backend, Vue, Flutter, and
+  network/security repositories so they read like user-facing project docs.
+- Added modernization notes across the project READMEs to point at stronger
+  2026-era stacks such as `Phaser 3`, `FastAPI`, `Vue 3 + Vite`, `Flutter +
+  Supabase`, and `PostGIS`-backed location services.
 
 ## Validation
 
