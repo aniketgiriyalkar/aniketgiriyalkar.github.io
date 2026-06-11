@@ -21,8 +21,8 @@
   procedural sound.
 - Versioned local high-score persistence behind an asynchronous provider
   interface ready for a future FastAPI/PostgreSQL implementation.
-- Original Canvas characters and generated scenery; no Mario graphics or music
-  are included.
+- Original generated jetpack pilots, three-eyed dragon, and Himalayan scenery;
+  no Mario graphics or music are included.
 
 ## Portfolio
 
