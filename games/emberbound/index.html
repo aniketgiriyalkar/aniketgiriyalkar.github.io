@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Emberbound is an original browser arcade game rebuilt from a Python training project."
+    />
+    <meta name="theme-color" content="#090914" />
+    <title>Emberbound — Browser Arcade Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-page">
+      <header class="game-header">
+        <a class="back-link" href="/" aria-label="Return to Aniket Giriyalkar portfolio">
+          <span aria-hidden="true">←</span> Portfolio
+        </a>
+        <div class="wordmark">
+          <span class="wordmark-kicker">An original browser arcade game</span>
+          <h1>EMBERBOUND</h1>
+        </div>
+        <div class="header-actions">
+          <button id="mute-button" type="button" aria-pressed="false">Sound: on</button>
+          <button id="pause-button" type="button" aria-pressed="false">Pause</button>
+        </div>
+      </header>
+
+      <section class="game-shell" aria-label="Emberbound game">
+        <div class="hud" aria-live="polite">
+          <div><span>Score</span><strong id="score">0000</strong></div>
+          <div><span>Best</span><strong id="high-score">0000</strong></div>
+          <div><span>Level</span><strong id="level">01</strong></div>
+        </div>
+
+        <div class="canvas-wrap" id="canvas-wrap">
+          <canvas
+            id="game"
+            width="1200"
+            height="600"
+            aria-label="Emberbound. Fly a jetpack pilot through obstacles and dodge incoming fire."
+          ></canvas>
+          <div class="screen active" id="start-screen">
+            <p class="screen-kicker">The mountain is waking</p>
+            <h2>Outfly the fire.</h2>
+            <p>
+              Weave through mountain obstacles and survive endless escalating
+              levels. After level 10, the hunt becomes much more crowded.
+            </p>
+            <fieldset class="pilot-select">
+              <legend>Choose your pilot</legend>
+              <button class="pilot-option active" type="button" data-pilot="woman" aria-pressed="true">
+                <img src="./assets/pilot-woman.png" alt="" aria-hidden="true">
+                <span>Woman</span>
+              </button>
+              <button class="pilot-option" type="button" data-pilot="man" aria-pressed="false">
+                <img src="./assets/pilot-man.png" alt="" aria-hidden="true">
+                <span>Man</span>
+              </button>
+            </fieldset>
+            <button id="start-button" class="primary-action" type="button">
+              Begin flight
+            </button>
+            <small>Arrow keys / W + S / touch controls</small>
+          </div>
+          <div class="screen" id="countdown-screen" aria-live="assertive">
+            <p class="screen-kicker" id="level-message">Level 1</p>
+            <strong id="countdown">3</strong>
+          </div>
+          <div class="screen" id="gameover-screen">
+            <p class="screen-kicker">Flight ended</p>
+            <h2 id="gameover-title">The embers caught you.</h2>
+            <p id="final-score">Score 0 · Best 0</p>
+            <button id="restart-button" class="primary-action" type="button">
+              Fly again
+            </button>
+          </div>
+          <div class="pause-label" id="pause-label">Paused</div>
+          <div class="level-banner" id="level-banner" aria-live="polite">
+            <span id="level-banner-number">Level 2</span>
+            <strong id="level-banner-message">New obstacles ahead</strong>
+          </div>
+        </div>
+
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button id="up-button" type="button" aria-label="Move up">
+            <span aria-hidden="true">↑</span> Rise
+          </button>
+          <button id="down-button" type="button" aria-label="Move down">
+            <span aria-hidden="true">↓</span> Dive
+          </button>
+        </div>
+      </section>
+
+      <footer class="game-footer">
+        <p>
+          <strong>Controls</strong> Arrow keys or W/S to move · P to pause · M
+          to mute · Enter to restart
+        </p>
+        <p>
+          Emberbound is an original web reimagining of the historical
+          <a
+            href="https://github.com/aniketgiriyalkar/Arcade_Game-Internshala-Certified-Python-Training-"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Maryo Python project ↗</a>.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="./js/game.js"></script>
+  </body>
+</html>
