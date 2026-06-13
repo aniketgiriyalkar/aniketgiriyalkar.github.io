@@ -5,3 +5,15 @@ public/games/
 .DS_Store
 npm-debug.log*
 *.tsbuildinfo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.secrets/
+secrets/
+*.secret
+*.secrets
+*.pem
+*.key
+credentials.local.json
