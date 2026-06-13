@@ -6,12 +6,17 @@ It also includes **Emberbound**, an original browser arcade game evolved from a
 historical Python/Pygame training project, plus a current resume download and
 links to the supporting project repositories behind the portfolio.
 
+The portfolio also publishes **Football Lab** at `/football-lab/`. Its source,
+data ingestion, and analytics live in `aniketgiriyalkar/Soccer-Analytics`; this
+repository vendors only the validated static artifact.
+
 ## Stack
 
 - Next.js App Router with TypeScript
 - Static export for GitHub Pages
 - Content modeled in typed local data
 - Dependency-free HTML Canvas game
+- Versioned Football Lab static artifact
 - Node test runner for game rules and score persistence
 - Resume and project links are served as static assets for GitHub Pages
 
@@ -35,7 +40,15 @@ npm run build
 
 `npm run build` generates the deployable site in `out/`. The Emberbound source
 lives in `games/emberbound/` and is synchronized to the public static tree by
-the `predev` and `prebuild` hooks.
+the `predev` and `prebuild` hooks. Football Lab is synchronized from a sibling
+`Soccer-Analytics/out` directory when present; otherwise the last-known-good
+vendored artifact is preserved.
+
+To import a promoted Football Lab release:
+
+```bash
+npm run sync:football -- --remote
+```
 
 ## Content Updates
 
@@ -83,10 +96,13 @@ paths:
 
 ## Deployment
 
-The GitHub Actions workflow builds and deploys `out/` to GitHub Pages. Pages is
-static hosting: a future shared Emberbound leaderboard must run as a separately
-hosted API. The planned boundary is an asynchronous score-provider interface,
-allowing a FastAPI/PostgreSQL adapter without coupling database concerns to the
-game loop.
+The GitHub Actions workflow builds and deploys `out/` to GitHub Pages. It also
+checks the latest validated Football Lab release daily at 09:13 UTC, after the
+upstream ingestion window, and preserves the last-known-good artifact if the
+download or validation fails. This polling design requires no cross-repository
+token. Pages is static hosting: a future shared Emberbound leaderboard must run
+as a separately hosted API. The planned boundary is an asynchronous
+score-provider interface, allowing a FastAPI/PostgreSQL adapter without
+coupling database concerns to the game loop.
 
-No secrets or database credentials are used by this project.
+No secrets or database credentials are required by this project.

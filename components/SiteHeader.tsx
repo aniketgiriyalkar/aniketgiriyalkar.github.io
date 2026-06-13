@@ -6,6 +6,7 @@ import { profile } from "@/data/site";
 
 const links = [
   ["Work", "/projects/"],
+  ["Football Lab", "/football-lab/"],
   ["About", "/about/"],
   ["Personal", "/personal/"],
   ["Contact", "/contact/"],
@@ -33,11 +34,17 @@ export function SiteHeader() {
           <span />
         </button>
         <nav id="site-navigation" className={open ? "nav open" : "nav"}>
-          {links.map(([label, href]) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)}>
-              {label}
-            </Link>
-          ))}
+          {links.map(([label, href]) =>
+            href === "/football-lab/" ? (
+              <a className="nav-football" key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </a>
+            ) : (
+              <Link key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </Link>
+            ),
+          )}
           <a
             href={profile.resumeUrl}
             target="_blank"

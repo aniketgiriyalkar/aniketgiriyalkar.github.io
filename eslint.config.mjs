@@ -9,6 +9,7 @@ export default defineConfig([
     ".next/**",
     "out/**",
     "public/games/**",
+    "public/football-lab/**",
     "js/**",
     "libs/**",
   ]),

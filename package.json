@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "sync:game": "node scripts/sync-game.mjs",
-    "predev": "npm run sync:game",
+    "sync:football": "node scripts/sync-football-lab.mjs",
+    "sync:assets": "npm run sync:game && npm run sync:football",
+    "predev": "npm run sync:assets",
     "dev": "next dev",
-    "prebuild": "npm run sync:game",
+    "prebuild": "npm run sync:assets",
     "build": "next build",
     "start": "npx serve out",
     "lint": "eslint .",

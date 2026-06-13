@@ -83,15 +83,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Soccer Analytics",
+    title: "Football Lab — European Soccer Analytics",
     summary:
-      "World Cup expected-goals modeling, player comparison, feature exploration, and visual analysis across reproducible notebooks.",
+      "A multi-metric analytics product for comparing players, teams, matches, and manager tenures across Europe, with historical xG, discipline, game-state context, and explicit data coverage.",
     domains: ["data"],
-    year: "2019",
-    technologies: ["Python", "Jupyter", "Machine Learning", "Visualization"],
+    year: "2026",
+    technologies: ["Next.js", "TypeScript", "Python", "Polars", "DuckDB", "Parquet"],
     accent: "#63e6be",
     featured: true,
+    status: "Interactive",
     links: [
+      {
+        label: "Open Football Lab",
+        href: "/football-lab/",
+      },
       {
         label: "View Repository",
         href: "https://github.com/aniketgiriyalkar/Soccer-Analytics",

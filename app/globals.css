@@ -154,6 +154,10 @@ textarea {
   background: var(--ember);
 }
 
+.nav-football {
+  color: var(--mint) !important;
+}
+
 .menu-toggle {
   display: none;
 }
