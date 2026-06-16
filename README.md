@@ -23,6 +23,67 @@ repository vendors only the validated static artifact.
 - Node test runner for game rules and score persistence
 - Resume and project links are served as static assets for GitHub Pages
 
+## Page-by-page breakdown
+
+| Route | Source | Purpose |
+| --- | --- | --- |
+| `/` | `app/page.tsx` + `data/site.ts` | Landing page with the hero, domain navigation, and featured work cards. |
+| `/projects/` | `app/projects/page.tsx` + `components/ProjectCard.tsx` | Full project archive driven by the typed project list. |
+| `/software-engineering/` | `app/software-engineering/page.tsx` | Domain page for backend, systems, APIs, and engineering-heavy projects. |
+| `/data-engineering-science/` | `app/data-engineering-science/page.tsx` | Domain page for analytics, data engineering, modeling, and visualization work. |
+| `/app-development/` | `app/app-development/page.tsx` | Domain page for web, mobile, and interactive application projects. |
+| `/games/` | `app/games/page.tsx` | Game launcher for Wordle-Reimagined and Emberbound, with links to play and inspect source repositories. |
+| `/games/wordle-reimagined/` | `public/games/wordle-reimagined/` | Vendored static export from the separate `Wordle-Reimagined` Next.js app. |
+| `/games/emberbound/` | `games/emberbound/` synced to `public/games/emberbound/` | Browser arcade game source maintained inside this repo and copied into the public tree during dev/build. |
+| `/football-lab/` | `public/football-lab/` | Vendored static artifact from the separate Soccer Analytics/Football Lab project. |
+| `/about/` | `app/about/page.tsx` | Profile narrative and current positioning. |
+| `/personal/` | `app/personal/page.tsx` | Personal interests and non-work placeholders. |
+| `/contact/` | `app/contact/page.tsx` | Contact links, resume link, and social destinations. |
+
+## Architecture
+
+```mermaid
+flowchart TD
+  Visitor["Visitor"]
+  Pages["GitHub Pages<br/>workflow deployment"]
+  NextOut["Static export<br/>out/"]
+  NextApp["Portfolio Next.js app<br/>app/ + components/"]
+  Content["Typed content<br/>data/site.ts"]
+  Resume["Resume + static assets<br/>public/"]
+
+  EmberSource["Emberbound source<br/>games/emberbound/"]
+  EmberPublic["Playable Emberbound<br/>public/games/emberbound/"]
+  WordleRepo["Wordle-Reimagined repo<br/>Next.js + NestJS monorepo"]
+  WordleOut["Wordle static export<br/>apps/web/out"]
+  WordlePublic["Playable Wordle<br/>public/games/wordle-reimagined/"]
+  FootballRepo["Soccer-Analytics repo<br/>Football Lab source"]
+  FootballOut["Validated Football Lab export<br/>out/ or release artifact"]
+  FootballPublic["Published Football Lab<br/>public/football-lab/"]
+
+  Visitor --> Pages
+  Pages --> NextOut
+  NextOut --> NextApp
+  NextApp --> Content
+  NextApp --> Resume
+
+  EmberSource -- "npm run sync:game" --> EmberPublic
+  WordleRepo --> WordleOut
+  WordleOut -- "npm run sync:wordle" --> WordlePublic
+  FootballRepo --> FootballOut
+  FootballOut -- "npm run sync:football" --> FootballPublic
+
+  EmberPublic --> NextOut
+  WordlePublic --> NextOut
+  FootballPublic --> NextOut
+```
+
+The portfolio itself is a static Next.js shell. The interactive experiences are
+kept at clear boundaries: Emberbound source lives in this repository,
+Wordle-Reimagined is built in its own repository and vendored as a static game,
+and Football Lab is promoted as a validated static analytics artifact. GitHub
+Actions validates the portfolio, builds `out/`, uploads it as a Pages artifact,
+and deploys that artifact to `https://aniketgiriyalkar.github.io/`.
+
 ## Local Development
 
 ```bash
