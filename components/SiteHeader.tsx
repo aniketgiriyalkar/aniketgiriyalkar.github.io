@@ -7,6 +7,7 @@ import { profile } from "@/data/site";
 const links = [
   ["Work", "/projects/"],
   ["Football Lab", "/football-lab/"],
+  ["Games", "/games/"],
   ["About", "/about/"],
   ["Personal", "/personal/"],
   ["Contact", "/contact/"],
@@ -52,14 +53,6 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           >
             Resume ↗
-          </a>
-          <a
-            className="nav-game"
-            href="/games/emberbound/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Play Emberbound ↗
           </a>
         </nav>
       </div>

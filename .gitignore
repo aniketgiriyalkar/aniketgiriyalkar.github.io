@@ -1,7 +1,10 @@
 node_modules/
 .next/
 out/
-public/games/
+public/games/*
+!public/games/
+!public/games/wordle-reimagined/
+!public/games/wordle-reimagined/**
 .DS_Store
 npm-debug.log*
 *.tsbuildinfo

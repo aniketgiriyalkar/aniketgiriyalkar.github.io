@@ -64,6 +64,25 @@ export const domains: Domain[] = [
 
 export const projects: Project[] = [
   {
+    title: "Wordle-Reimagined — Offline-First Word Game",
+    summary:
+      "A polished 4- and 5-letter Wordle-style game with keyboard play, curated answers, generated dictionary validation, and an optional NestJS API for daily puzzles and anonymous stats.",
+    domains: ["software-engineering", "app-development"],
+    year: "2026",
+    technologies: ["Next.js", "TypeScript", "NestJS", "SQLite", "Node.js"],
+    accent: "#6bb8ff",
+    featured: true,
+    status: "Playable",
+    links: [
+      { label: "Play Game", href: "/games/wordle-reimagined/" },
+      {
+        label: "View Repository",
+        href: "https://github.com/aniketgiriyalkar/Wordle-Reimagined",
+        external: true,
+      },
+    ],
+  },
+  {
     title: "Emberbound — A Python Arcade Game Rebuilt for the Web",
     summary:
       "An original Canvas arcade experience evolved from a Pygame training project, with responsive controls, endless progression, multi-villain encounters, and local high-score persistence.",

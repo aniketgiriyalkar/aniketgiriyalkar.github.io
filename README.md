@@ -3,8 +3,10 @@
 A statically exported Next.js portfolio organized around software engineering,
 data engineering and science, app development, and selected personal interests.
 It also includes **Emberbound**, an original browser arcade game evolved from a
-historical Python/Pygame training project, plus a current resume download and
-links to the supporting project repositories behind the portfolio.
+historical Python/Pygame training project, and **Wordle-Reimagined**, an
+offline-first word game built in a separate Next.js/NestJS repository. The site
+also includes a current resume download and links to the supporting project
+repositories behind the portfolio.
 
 The portfolio also publishes **Football Lab** at `/football-lab/`. Its source,
 data ingestion, and analytics live in `aniketgiriyalkar/Soccer-Analytics`; this
@@ -16,6 +18,7 @@ repository vendors only the validated static artifact.
 - Static export for GitHub Pages
 - Content modeled in typed local data
 - Dependency-free HTML Canvas game
+- Vendored Wordle-Reimagined static artifact
 - Versioned Football Lab static artifact
 - Node test runner for game rules and score persistence
 - Resume and project links are served as static assets for GitHub Pages
@@ -40,9 +43,12 @@ npm run build
 
 `npm run build` generates the deployable site in `out/`. The Emberbound source
 lives in `games/emberbound/` and is synchronized to the public static tree by
-the `predev` and `prebuild` hooks. Football Lab is synchronized from a sibling
-`Soccer-Analytics/out` directory when present; otherwise the last-known-good
-vendored artifact is preserved.
+the `predev` and `prebuild` hooks. Wordle-Reimagined is synchronized from a
+separate static export when `WORDLE_REIMAGINED_OUT` points to its `apps/web/out`
+directory, or from a sibling `Wordle-Reimagined/apps/web/out` directory when
+present. Football Lab is synchronized from a sibling `Soccer-Analytics/out`
+directory when present; otherwise the last-known-good vendored artifact is
+preserved.
 
 To import a promoted Football Lab release:
 
@@ -68,6 +74,8 @@ pass without changing the public site design.
 
 - `Arcade_Game-Internshala-Certified-Python-Training-` - original Maryo/Pygame
   training project preserved as the historical baseline.
+- `Wordle-Reimagined` - offline-first Next.js word game with an optional NestJS
+  backend for daily puzzles and anonymous result stats.
 - `Soccer-Analytics` - World Cup xG modeling and player analysis notebooks.
 - `Orders_Microservice` - order-processing API with Sequelize and PostgreSQL.
 - `Appointment-booking-management-system` - Vue appointment management app.
