@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[45197,["/games/wordle-reimagined/_next/static/chunks/158myu8e_yme3.js","/games/wordle-reimagined/_next/static/chunks/1lqh3r952lq9a.js"],"WordGame"]
+2:I[45197,["/games/wordle-reimagined/_next/static/chunks/158myu8e_yme3.js","/games/wordle-reimagined/_next/static/chunks/2rmdypzmund2q.js"],"WordGame"]
 3:I[97367,["/games/wordle-reimagined/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/games/wordle-reimagined/_next/static/chunks/1lqh3r952lq9a.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"rIkO-wsO-_Nfnd6b-Pt_J"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/games/wordle-reimagined/_next/static/chunks/2rmdypzmund2q.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"eWcwp2To9bHx6lPNMKdeU"}
 5:null
