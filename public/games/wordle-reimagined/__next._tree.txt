@@ -1,2 +1,2 @@
-:HL["/games/wordle-reimagined/_next/static/chunks/3u8n2afmdy3jp.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"eWcwp2To9bHx6lPNMKdeU"}
+:HL["/games/wordle-reimagined/_next/static/chunks/3dtccke7gpgx0.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"-vQYk7_sJcP4l397Cc2L3"}
