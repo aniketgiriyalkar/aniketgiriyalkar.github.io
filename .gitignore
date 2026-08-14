@@ -7,6 +7,8 @@ public/games/*
 !public/games/wordle-reimagined/**
 !public/games/queens-reimagined/
 !public/games/queens-reimagined/**
+!public/games/mini-sudoku-reimagined/
+!public/games/mini-sudoku-reimagined/**
 .DS_Store
 npm-debug.log*
 *.tsbuildinfo

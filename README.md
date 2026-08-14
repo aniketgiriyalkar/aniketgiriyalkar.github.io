@@ -4,7 +4,7 @@ A statically exported Next.js portfolio organized around software engineering,
 data engineering and science, app development, and selected personal interests.
 It also includes **Emberbound**, an original browser arcade game evolved from a
 historical Python/Pygame training project, **Queens-Reimagined**, a deterministic
-daily logic game, and **Wordle-Reimagined**, an
+daily logic game, **Mini Sudoku-Reimagined**, a compact daily number puzzle, and **Wordle-Reimagined**, an
 offline-first word game built in a separate Next.js/NestJS repository. The site
 also includes a current resume download and links to the supporting project
 repositories behind the portfolio.
@@ -21,6 +21,7 @@ repository vendors only the validated static artifact.
 - Dependency-free HTML Canvas game
 - Vendored Wordle-Reimagined static artifact
 - Vendored Queens-Reimagined static artifact
+- Vendored Mini Sudoku-Reimagined static artifact
 - Versioned Football Lab static artifact
 - Node test runner for game rules and score persistence
 - Resume and project links are served as static assets for GitHub Pages
@@ -34,7 +35,8 @@ repository vendors only the validated static artifact.
 | `/software-engineering/` | `app/software-engineering/page.tsx` | Domain page for backend, systems, APIs, and engineering-heavy projects. |
 | `/data-engineering-science/` | `app/data-engineering-science/page.tsx` | Domain page for analytics, data engineering, modeling, and visualization work. |
 | `/app-development/` | `app/app-development/page.tsx` | Domain page for web, mobile, and interactive application projects. |
-| `/games/` | `app/games/page.tsx` | Game launcher for Queens-Reimagined, Wordle-Reimagined, and Emberbound, with links to play and inspect source repositories. |
+| `/games/` | `app/games/page.tsx` | Game launcher for Mini Sudoku-Reimagined, Queens-Reimagined, Wordle-Reimagined, and Emberbound, with links to play and inspect source repositories. |
+| `/games/mini-sudoku-reimagined/` | `public/games/mini-sudoku-reimagined/` | Vendored static export from the shared `Daily-Games-Reimagined` repository. |
 | `/games/queens-reimagined/` | `public/games/queens-reimagined/` | Vendored static export from the separate `Daily-Games-Reimagined` repository. |
 | `/games/wordle-reimagined/` | `public/games/wordle-reimagined/` | Vendored static export from the separate `Wordle-Reimagined` Next.js app. |
 | `/games/emberbound/` | `games/emberbound/` synced to `public/games/emberbound/` | Browser arcade game source maintained inside this repo and copied into the public tree during dev/build. |
@@ -83,6 +85,7 @@ flowchart TD
 The portfolio itself is a static Next.js shell. The interactive experiences are
 kept at clear boundaries: Emberbound source lives in this repository,
 Wordle-Reimagined is built in its own repository and vendored as a static game,
+Mini Sudoku-Reimagined and Queens-Reimagined share the Daily Games repository,
 and Football Lab is promoted as a validated static analytics artifact. GitHub
 Actions validates the portfolio, builds `out/`, uploads it as a Pages artifact,
 and deploys that artifact to `https://aniketgiriyalkar.github.io/`.
@@ -110,7 +113,8 @@ lives in `games/emberbound/` and is synchronized to the public static tree by
 the `predev` and `prebuild` hooks. Wordle-Reimagined is synchronized from a
 separate static export when `WORDLE_REIMAGINED_OUT` points to its `apps/web/out`
 directory, or from a sibling `Wordle-Reimagined/apps/web/out` directory when
-present. Football Lab is synchronized from a sibling `Soccer-Analytics/out`
+present. Mini Sudoku-Reimagined is synchronized from
+`Daily-Games-Reimagined/apps/mini-sudoku/out`; Football Lab is synchronized from a sibling `Soccer-Analytics/out`
 directory when present; otherwise the last-known-good vendored artifact is
 preserved.
 

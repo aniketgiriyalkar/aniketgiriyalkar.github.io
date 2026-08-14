@@ -64,6 +64,24 @@ export const domains: Domain[] = [
 
 export const projects: Project[] = [
   {
+    title: "Mini Sudoku-Reimagined — Six Digits, Offline-First",
+    summary:
+      "A compact 6×6 Sudoku with deterministic daily puzzles, unique-solution generation, unlimited practice, pencil notes, hints, local streaks, and accessible keyboard and touch controls.",
+    domains: ["software-engineering", "app-development"],
+    year: "2026",
+    technologies: ["Next.js", "TypeScript", "React", "localStorage", "Node.js"],
+    accent: "#7bb7ff",
+    status: "Playable",
+    links: [
+      { label: "Play Game", href: "/games/mini-sudoku-reimagined/" },
+      {
+        label: "View Repository",
+        href: "https://github.com/aniketgiriyalkar/Daily-Games-Reimagined",
+        external: true,
+      },
+    ],
+  },
+  {
     title: "Queens-Reimagined — Daily Logic, Offline-First",
     summary:
       "A responsive crown-placement puzzle with deterministic daily boards, an exact unique-solution generator, unlimited practice, local streaks, and accessible keyboard and touch controls.",
