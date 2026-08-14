@@ -1,5 +1,14 @@
 const games = [
   {
+    title: "Mini Sudoku-Reimagined",
+    status: "New / Number logic",
+    description:
+      "A focused 6×6 daily Sudoku with uniquely generated puzzles, three practice difficulties, notes, hints, keyboard and touch play, and local streaks.",
+    href: "/games/mini-sudoku-reimagined/",
+    repo: "https://github.com/aniketgiriyalkar/Daily-Games-Reimagined",
+    accent: "#7bb7ff",
+  },
+  {
     title: "Queens-Reimagined",
     status: "New / Daily logic",
     description:
@@ -35,7 +44,7 @@ export default function GamesPage() {
         <p className="eyebrow">Games / Interactive work</p>
         <h1>Playable experiments with real product polish.</h1>
         <p>
-          A small arcade of browser-first projects, from daily logic grids and word play to canvas action.
+          A small arcade of browser-first projects, from daily number and logic grids to word play and canvas action.
         </p>
       </section>
 
