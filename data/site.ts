@@ -71,6 +71,7 @@ export const projects: Project[] = [
     year: "2026",
     technologies: ["Next.js", "TypeScript", "React", "localStorage", "Node.js"],
     accent: "#7bb7ff",
+    featured: true,
     status: "Playable",
     links: [
       { label: "Play Game", href: "/games/mini-sudoku-reimagined/" },
@@ -89,6 +90,7 @@ export const projects: Project[] = [
     year: "2026",
     technologies: ["Next.js", "TypeScript", "React", "localStorage", "Node.js"],
     accent: "#e8ff74",
+    featured: true,
     status: "Playable",
     links: [
       { label: "Play Game", href: "/games/queens-reimagined/" },
