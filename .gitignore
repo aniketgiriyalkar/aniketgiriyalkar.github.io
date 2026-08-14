@@ -5,6 +5,8 @@ public/games/*
 !public/games/
 !public/games/wordle-reimagined/
 !public/games/wordle-reimagined/**
+!public/games/queens-reimagined/
+!public/games/queens-reimagined/**
 .DS_Store
 npm-debug.log*
 *.tsbuildinfo

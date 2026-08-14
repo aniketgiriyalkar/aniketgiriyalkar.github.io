@@ -6,8 +6,9 @@
   "scripts": {
     "sync:game": "node scripts/sync-game.mjs",
     "sync:wordle": "node scripts/sync-wordle-reimagined.mjs",
+    "sync:queens": "node scripts/sync-queens-reimagined.mjs",
     "sync:football": "node scripts/sync-football-lab.mjs",
-    "sync:assets": "npm run sync:game && npm run sync:wordle && npm run sync:football",
+    "sync:assets": "npm run sync:game && npm run sync:wordle && npm run sync:queens && npm run sync:football",
     "predev": "npm run sync:assets",
     "dev": "next dev",
     "prebuild": "npm run sync:assets",
