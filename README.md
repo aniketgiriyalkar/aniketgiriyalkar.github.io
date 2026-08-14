@@ -3,7 +3,8 @@
 A statically exported Next.js portfolio organized around software engineering,
 data engineering and science, app development, and selected personal interests.
 It also includes **Emberbound**, an original browser arcade game evolved from a
-historical Python/Pygame training project, and **Wordle-Reimagined**, an
+historical Python/Pygame training project, **Queens-Reimagined**, a deterministic
+daily logic game, and **Wordle-Reimagined**, an
 offline-first word game built in a separate Next.js/NestJS repository. The site
 also includes a current resume download and links to the supporting project
 repositories behind the portfolio.
@@ -19,6 +20,7 @@ repository vendors only the validated static artifact.
 - Content modeled in typed local data
 - Dependency-free HTML Canvas game
 - Vendored Wordle-Reimagined static artifact
+- Vendored Queens-Reimagined static artifact
 - Versioned Football Lab static artifact
 - Node test runner for game rules and score persistence
 - Resume and project links are served as static assets for GitHub Pages
@@ -32,7 +34,8 @@ repository vendors only the validated static artifact.
 | `/software-engineering/` | `app/software-engineering/page.tsx` | Domain page for backend, systems, APIs, and engineering-heavy projects. |
 | `/data-engineering-science/` | `app/data-engineering-science/page.tsx` | Domain page for analytics, data engineering, modeling, and visualization work. |
 | `/app-development/` | `app/app-development/page.tsx` | Domain page for web, mobile, and interactive application projects. |
-| `/games/` | `app/games/page.tsx` | Game launcher for Wordle-Reimagined and Emberbound, with links to play and inspect source repositories. |
+| `/games/` | `app/games/page.tsx` | Game launcher for Queens-Reimagined, Wordle-Reimagined, and Emberbound, with links to play and inspect source repositories. |
+| `/games/queens-reimagined/` | `public/games/queens-reimagined/` | Vendored static export from the separate `Daily-Games-Reimagined` repository. |
 | `/games/wordle-reimagined/` | `public/games/wordle-reimagined/` | Vendored static export from the separate `Wordle-Reimagined` Next.js app. |
 | `/games/emberbound/` | `games/emberbound/` synced to `public/games/emberbound/` | Browser arcade game source maintained inside this repo and copied into the public tree during dev/build. |
 | `/football-lab/` | `public/football-lab/` | Vendored static artifact from the separate Soccer Analytics/Football Lab project. |

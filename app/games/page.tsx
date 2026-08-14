@@ -1,5 +1,14 @@
 const games = [
   {
+    title: "Queens-Reimagined",
+    status: "New / Daily logic",
+    description:
+      "A daily crown-placement puzzle with uniquely generated boards, three practice difficulties, keyboard and touch play, local streaks, and zero account setup.",
+    href: "/games/queens-reimagined/",
+    repo: "https://github.com/aniketgiriyalkar/Daily-Games-Reimagined",
+    accent: "#e8ff74",
+  },
+  {
     title: "Wordle-Reimagined",
     status: "New / Word logic",
     description:
@@ -26,7 +35,7 @@ export default function GamesPage() {
         <p className="eyebrow">Games / Interactive work</p>
         <h1>Playable experiments with real product polish.</h1>
         <p>
-          A small arcade of browser-first projects, from fast word logic to canvas action.
+          A small arcade of browser-first projects, from daily logic grids and word play to canvas action.
         </p>
       </section>
 

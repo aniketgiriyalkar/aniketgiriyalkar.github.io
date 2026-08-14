@@ -64,6 +64,24 @@ export const domains: Domain[] = [
 
 export const projects: Project[] = [
   {
+    title: "Queens-Reimagined — Daily Logic, Offline-First",
+    summary:
+      "A responsive crown-placement puzzle with deterministic daily boards, an exact unique-solution generator, unlimited practice, local streaks, and accessible keyboard and touch controls.",
+    domains: ["software-engineering", "app-development"],
+    year: "2026",
+    technologies: ["Next.js", "TypeScript", "React", "localStorage", "Node.js"],
+    accent: "#e8ff74",
+    status: "Playable",
+    links: [
+      { label: "Play Game", href: "/games/queens-reimagined/" },
+      {
+        label: "View Repository",
+        href: "https://github.com/aniketgiriyalkar/Daily-Games-Reimagined",
+        external: true,
+      },
+    ],
+  },
+  {
     title: "Wordle-Reimagined — Offline-First Word Game",
     summary:
       "A polished 4- and 5-letter Wordle-style game with keyboard play, curated answers, generated dictionary validation, and an optional NestJS API for daily puzzles and anonymous stats.",
